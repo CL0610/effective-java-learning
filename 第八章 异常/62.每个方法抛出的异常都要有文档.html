@@ -1,0 +1,1282 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>62.每个方法抛出的异常都要有文档 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="63.编写合适的异常信息.html" />
+    
+    
+    <link rel="prev" href="61.抛出与抽象相对应的异常.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    1.创建和销毁对象
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第一章 创建和销毁对象/2.多个参数使用Builder模式创建对象.html">
+            
+                <a href="../第一章 创建和销毁对象/2.多个参数使用Builder模式创建对象.html">
+            
+                    
+                    2.多个参数使用Builder模式创建对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第一章 创建和销毁对象/3.使用枚举类型强化singleton.html">
+            
+                <a href="../第一章 创建和销毁对象/3.使用枚举类型强化singleton.html">
+            
+                    
+                    3.使用枚举类型强化singleton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第一章 创建和销毁对象/4.私有构造器以强化对象不可实例化.html">
+            
+                <a href="../第一章 创建和销毁对象/4.私有构造器以强化对象不可实例化.html">
+            
+                    
+                    4.私有构造器以强化对象不可实例化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第一章 创建和销毁对象/5.避免创建不必要的对象.html">
+            
+                <a href="../第一章 创建和销毁对象/5.避免创建不必要的对象.html">
+            
+                    
+                    5.避免创建不必要的对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第一章 创建和销毁对象/6.消除过期的对象引用.html">
+            
+                <a href="../第一章 创建和销毁对象/6.消除过期的对象引用.html">
+            
+                    
+                    6.消除过期的对象引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../第一章 创建和销毁对象/7.避免使用finalize方法.html">
+            
+                <a href="../第一章 创建和销毁对象/7.避免使用finalize方法.html">
+            
+                    
+                    7.避免使用finalize()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    2.对象通用的方法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第二章 对象通用的方法/8.覆盖equals方法请遵守通用规定.html">
+            
+                <a href="../第二章 对象通用的方法/8.覆盖equals方法请遵守通用规定.html">
+            
+                    
+                    8.覆盖equals方法请遵守通用规定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第二章 对象通用的方法/9.覆盖equals时要同时覆盖hashCode.html">
+            
+                <a href="../第二章 对象通用的方法/9.覆盖equals时要同时覆盖hashCode.html">
+            
+                    
+                    9.覆盖equals时要同时覆盖hashCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第二章 对象通用的方法/10.覆盖toString.html">
+            
+                <a href="../第二章 对象通用的方法/10.覆盖toString.html">
+            
+                    
+                    10.覆盖toString
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第二章 对象通用的方法/12.考虑实现Comparable接口.html">
+            
+                <a href="../第二章 对象通用的方法/12.考虑实现Comparable接口.html">
+            
+                    
+                    12.考虑实现Comparable接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3.类和接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第三章 类和接口/13.使类和成员的可访问性最小化.html">
+            
+                <a href="../第三章 类和接口/13.使类和成员的可访问性最小化.html">
+            
+                    
+                    13.使类和成员的可访问性最小化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第三章 类和接口/14.在公有类中使用访问方法而非公有域.html">
+            
+                <a href="../第三章 类和接口/14.在公有类中使用访问方法而非公有域.html">
+            
+                    
+                    14.在公有类中使用访问方法而非公有域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第三章 类和接口/15.使可变性最小化.html">
+            
+                <a href="../第三章 类和接口/15.使可变性最小化.html">
+            
+                    
+                    15.使可变性最小化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第三章 类和接口/16.复合优于继承.html">
+            
+                <a href="../第三章 类和接口/16.复合优于继承.html">
+            
+                    
+                    16.复合优于继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第三章 类和接口/17.要么为继承而设计，并提供文档说明，要么就禁止继承.html">
+            
+                <a href="../第三章 类和接口/17.要么为继承而设计，并提供文档说明，要么就禁止继承.html">
+            
+                    
+                    17.要么为继承而设计，并提供文档说明，要么就禁止继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../第三章 类和接口/19.接口只用于定义类型.html">
+            
+                <a href="../第三章 类和接口/19.接口只用于定义类型.html">
+            
+                    
+                    19.接口只用于定义类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../第三章 类和接口/20.类层次优于标签类.html">
+            
+                <a href="../第三章 类和接口/20.类层次优于标签类.html">
+            
+                    
+                    20.类层次优于标签类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../第三章 类和接口/21.用函数对象表示策略.html">
+            
+                <a href="../第三章 类和接口/21.用函数对象表示策略.html">
+            
+                    
+                    21.用函数对象表示策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../第三章 类和接口/22.优先考虑静态成员类.html">
+            
+                <a href="../第三章 类和接口/22.优先考虑静态成员类.html">
+            
+                    
+                    22.优先考虑静态成员类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4.泛型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第四章 泛型/23.使用泛型时不要使用原生态类型（raw type）.html">
+            
+                <a href="../第四章 泛型/23.使用泛型时不要使用原生态类型（raw type）.html">
+            
+                    
+                    23.使用泛型不要使用原生类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../第四章 泛型/24.消除非受检警告.html">
+            
+                <a href="../第四章 泛型/24.消除非受检警告.html">
+            
+                    
+                    24.消除非受检警告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../第四章 泛型/25.List优于数组.html">
+            
+                <a href="../第四章 泛型/25.List优于数组.html">
+            
+                    
+                    25.List优于数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    5.枚举和注解
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../第五章 枚举和注解/30.使用枚举代替int 常量.html">
+            
+                <a href="../第五章 枚举和注解/30.使用枚举代替int 常量.html">
+            
+                    
+                    30.使用枚举代替int常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../第五章 枚举和注解/31.用实例域代替序数.html">
+            
+                <a href="../第五章 枚举和注解/31.用实例域代替序数.html">
+            
+                    
+                    31.用实例域代替序数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../第五章 枚举和注解/32.用EnumSet代替位域.html">
+            
+                <a href="../第五章 枚举和注解/32.用EnumSet代替位域.html">
+            
+                    
+                    32.用EnumSet代替位域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../第五章 枚举和注解/33.用EnumMap代替序数索引.html">
+            
+                <a href="../第五章 枚举和注解/33.用EnumMap代替序数索引.html">
+            
+                    
+                    33.用EnumMap代替序数索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../第五章 枚举和注解/35.注解优于命名模式.html">
+            
+                <a href="../第五章 枚举和注解/35.注解优于命名模式.html">
+            
+                    
+                    35.注解优于命名模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    6.方法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../第六章 方法/38.检查方法参数的有效性.html">
+            
+                <a href="../第六章 方法/38.检查方法参数的有效性.html">
+            
+                    
+                    38.检查方法参数的有效性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../第六章 方法/39.参数进行保护性拷贝.html">
+            
+                <a href="../第六章 方法/39.参数进行保护性拷贝.html">
+            
+                    
+                    39.参数进行保护性拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../第六章 方法/40.谨慎的设计方法签名.html">
+            
+                <a href="../第六章 方法/40.谨慎的设计方法签名.html">
+            
+                    
+                    40.谨慎的设计方法签名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../第六章 方法/41.慎用重载.html">
+            
+                <a href="../第六章 方法/41.慎用重载.html">
+            
+                    
+                    41.慎用重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../第六章 方法/42.慎用可变参数.html">
+            
+                <a href="../第六章 方法/42.慎用可变参数.html">
+            
+                    
+                    42.慎用可变参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../第六章 方法/43.返回长度为0的集合或者数组，而不是null.html">
+            
+                <a href="../第六章 方法/43.返回长度为0的集合或者数组，而不是null.html">
+            
+                    
+                    43.返回长度为0的集合或者数组，而不是null
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../第六章 方法/44.API需要编写文档注释.html">
+            
+                <a href="../第六章 方法/44.API需要编写文档注释.html">
+            
+                    
+                    44.API需要编写文档注释
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    7.通用程序设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../第七章 通用程序设计/45.将局部变量的作用域最小化.html">
+            
+                <a href="../第七章 通用程序设计/45.将局部变量的作用域最小化.html">
+            
+                    
+                    45.将局部变量的作用域最小化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../第七章 通用程序设计/46.for-each循环优于传统的for循环.html">
+            
+                <a href="../第七章 通用程序设计/46.for-each循环优于传统的for循环.html">
+            
+                    
+                    46.for-each循环优于传统的for循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../第七章 通用程序设计/47.多使用类库.html">
+            
+                <a href="../第七章 通用程序设计/47.多使用类库.html">
+            
+                    
+                    47.多使用类库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../第七章 通用程序设计/48.需要精确答案，请避免使用float和double.html">
+            
+                <a href="../第七章 通用程序设计/48.需要精确答案，请避免使用float和double.html">
+            
+                    
+                    48.需要精确答案，请避免使用float和double
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../第七章 通用程序设计/49.基本类型优先于装箱基本类型.html">
+            
+                <a href="../第七章 通用程序设计/49.基本类型优先于装箱基本类型.html">
+            
+                    
+                    49.基本类型优先于装箱基本类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../第七章 通用程序设计/50.尽量避免使用字符串.html">
+            
+                <a href="../第七章 通用程序设计/50.尽量避免使用字符串.html">
+            
+                    
+                    50.尽量避免使用字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../第七章 通用程序设计/51.谨慎使用字符串连接符.html">
+            
+                <a href="../第七章 通用程序设计/51.谨慎使用字符串连接符.html">
+            
+                    
+                    51.谨慎使用字符串连接符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../第七章 通用程序设计/52.通过接口引用对象.html">
+            
+                <a href="../第七章 通用程序设计/52.通过接口引用对象.html">
+            
+                    
+                    52.通过接口引用对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../第七章 通用程序设计/53.慎用反射机制.html">
+            
+                <a href="../第七章 通用程序设计/53.慎用反射机制.html">
+            
+                    
+                    53.慎用反射机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../第七章 通用程序设计/54.慎用本地方法.html">
+            
+                <a href="../第七章 通用程序设计/54.慎用本地方法.html">
+            
+                    
+                    54.慎用本地方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../第七章 通用程序设计/55.谨慎的进行优化.html">
+            
+                <a href="../第七章 通用程序设计/55.谨慎的进行优化.html">
+            
+                    
+                    55.谨慎的进行优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../第七章 通用程序设计/56.遵守普遍接受的命名规则.html">
+            
+                <a href="../第七章 通用程序设计/56.遵守普遍接受的命名规则.html">
+            
+                    
+                    56.遵守普遍接受的命名规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    8.异常
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="57.只针对异常的情况才使用异常.html">
+            
+                <a href="57.只针对异常的情况才使用异常.html">
+            
+                    
+                    57.只针对异常的情况才使用异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="58.选择合适的异常.html">
+            
+                <a href="58.选择合适的异常.html">
+            
+                    
+                    58.选择合适的异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="59.避免不必要的使用受检的异常.html">
+            
+                <a href="59.避免不必要的使用受检的异常.html">
+            
+                    
+                    59.避免不必要的使用受检的异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="61.抛出与抽象相对应的异常.html">
+            
+                <a href="61.抛出与抽象相对应的异常.html">
+            
+                    
+                    61.抛出与抽象相对应的异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.5" data-path="62.每个方法抛出的异常都要有文档.html">
+            
+                <a href="62.每个方法抛出的异常都要有文档.html">
+            
+                    
+                    62.每个方法抛出的异常都要有文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="63.编写合适的异常信息.html">
+            
+                <a href="63.编写合适的异常信息.html">
+            
+                    
+                    63.编写合适的异常信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="65.不要忽略异常.html">
+            
+                <a href="65.不要忽略异常.html">
+            
+                    
+                    65.不要忽略异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    9.并发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../第九章 并发/66.同步访问共享的可变数据.html">
+            
+                <a href="../第九章 并发/66.同步访问共享的可变数据.html">
+            
+                    
+                    66.同步访问共享的可变数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../第九章 并发/68.executor和task优于创建线程.html">
+            
+                <a href="../第九章 并发/68.executor和task优于创建线程.html">
+            
+                    
+                    68.executor和task优于创建线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../第九章 并发/69.优先使用提供的并发工具.html">
+            
+                <a href="../第九章 并发/69.优先使用提供的并发工具.html">
+            
+                    
+                    69.优先使用提供的并发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../第九章 并发/70.线程安全性的文档化.html">
+            
+                <a href="../第九章 并发/70.线程安全性的文档化.html">
+            
+                    
+                    70.线程安全性的文档化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../第九章 并发/71.慎用延迟初始化.html">
+            
+                <a href="../第九章 并发/71.慎用延迟初始化.html">
+            
+                    
+                    71.慎用延迟初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../第九章 并发/72.不要依赖于线程调度器.html">
+            
+                <a href="../第九章 并发/72.不要依赖于线程调度器.html">
+            
+                    
+                    72.不要依赖于线程调度器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../第九章 并发/73.避免使用线程组.html">
+            
+                <a href="../第九章 并发/73.避免使用线程组.html">
+            
+                    
+                    73.避免使用线程组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    9.序列化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../第十章 序列化/74.谨慎的实现Serializable接口.html">
+            
+                <a href="../第十章 序列化/74.谨慎的实现Serializable接口.html">
+            
+                    
+                    74.谨慎的实现Serializable接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../第十章 序列化/75.考虑使用自定义的序列化形式.html">
+            
+                <a href="../第十章 序列化/75.考虑使用自定义的序列化形式.html">
+            
+                    
+                    75.考虑使用自定义的序列化形式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../第十章 序列化/76.保护性地编写readObject方法.html">
+            
+                <a href="../第十章 序列化/76.保护性地编写readObject方法.html">
+            
+                    
+                    76.保护性地编写readObject方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../第十章 序列化/77.单例模式，枚举类型优先于readResolve.html">
+            
+                <a href="../第十章 序列化/77.单例模式，枚举类型优先于readResolve.html">
+            
+                    
+                    77.单例模式，枚举类型优先于readResolve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../第十章 序列化/78.考虑用序列化代理代替序列化实例.html">
+            
+                <a href="../第十章 序列化/78.考虑用序列化代理代替序列化实例.html">
+            
+                    
+                    78.考虑用序列化代理代替序列化实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >62.每个方法抛出的异常都要有文档</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <ul>
+<li><p>&#x95EE;&#x9898;</p>
+<p>&#x5728;&#x8BBE;&#x8BA1;&#x65B9;&#x6CD5;API&#x65F6;&#xFF0C;&#x5F02;&#x5E38;&#x662F;&#x5E94;&#x8BE5;&#x7740;&#x91CD;&#x5173;&#x6CE8;&#x7684;&#xFF0C;&#x540C;&#x6837;&#x5730;&#xFF0C;&#x65B9;&#x6CD5;&#x7684;&#x6587;&#x6863;&#x6CE8;&#x91CA;&#x4E0A;&#x5F02;&#x5E38;&#x6761;&#x4EF6;&#x4E5F;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x7684;&#x8BF4;&#x660E;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x9488;&#x5BF9;&#x5F02;&#x5E38;&#x7F16;&#x5199;&#x6587;&#x6863;&#x65F6;&#xFF0C;&#x6709;&#x54EA;&#x4E9B;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5730;&#x65B9;&#xFF1F;</p>
+</li>
+<li><p>&#x7B54;&#x6848;</p>
+<ol>
+<li><strong>&#x59CB;&#x7EC8;&#x8981;&#x5355;&#x72EC;&#x5730;&#x58F0;&#x660E;&#x53D7;&#x68C0;&#x5F02;&#x5E38;&#xFF0C;</strong>&#x5E76;&#x4E14;&#x4F7F;&#x7528;javadoc&#x7684;<code>@throws</code>&#x6807;&#x8BB0;,&#x51C6;&#x786E;&#x5730;&#x8BB0;&#x5F55;&#x4E0B;&#x629B;&#x51FA;&#x6BCF;&#x4E2A;&#x5F02;&#x5E38;&#x7684;&#x6761;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x65B9;&#x6CD5;&#x629B;&#x51FA;&#x591A;&#x4E2A;&#x5F02;&#x5E38;&#x7C7B;&#xFF0C;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x5B83;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x7C7B;&#x7684;&#x7236;&#x7C7B;&#xFF0C;&#x6C38;&#x8FDC;&#x4E0D;&#x8981;&#x58F0;&#x660E;&#x65B9;&#x6CD5;&#x201D;throwsException&#x201D;&#xFF0C;&#x6216;&#x66F4;&#x7CDF;&#x7CD5;&#x7684;&#x58F0;&#x660E;&#x5B83;&#x201D;throw Throwable&#x201D;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x58F0;&#x660E;&#x6CA1;&#x6709;&#x7ED9;&#x5F00;&#x53D1;&#x8005;&#x5173;&#x4E8E;&#x201D;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x629B;&#x51FA;&#x54EA;&#x4E9B;&#x5F02;&#x5E38;&#x201D;&#x7684;&#x4EFB;&#x4F55;&#x6709;&#x7528;&#x4FE1;&#x606F;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x63A9;&#x76D6;&#x4E86;&#x8BE5;&#x65B9;&#x6CD5;&#x5728;&#x540C;&#x6837;&#x7684;&#x6267;&#x884C;&#x73AF;&#x5883;&#x4E0B;&#x53EF;&#x80FD;&#x629B;&#x51FA;&#x7684;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x5F02;&#x5E38;&#xFF0C; &#x56E0;&#x6B64;&#x4F1A;&#x59A8;&#x788D;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528;javacdoc&#x7684;@throws&#x6807;&#x7B7E;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x65B9;&#x6CD5;&#x53EF;&#x80FD;&#x629B;&#x51FA;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x8981;&#x4F7F;&#x7528;throws&#x5173;&#x952E;&#x5B57;&#x5C06;&#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;&#x5305;&#x542B;&#x5728;&#x65B9;&#x6CD5;&#x7684;&#x58F0;&#x660E;&#x4E2D;&#x3002;&#x4F7F;&#x7528;API&#x7684;&#x7A0B;&#x5E8F;&#x5458;&#x5FC5;&#x987B;&#x77E5;&#x9053;&#x54EA;&#x4E9B;&#x5F02;&#x5E38;&#x662F;&#x9700;&#x8981;&#x53D7;&#x68C0;&#x7684;,&#x54EA;&#x4E9B;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x53D7;&#x68C0;&#x7684;&#x3002;</li>
+</ol>
+</li>
+<li><p>&#x7ED3;&#x8BBA;</p>
+<p><strong>&#x8981;&#x4E3A;&#x4F60;&#x7F16;&#x5199;&#x7684;&#x6BCF;&#x4E2A;&#x65B9;&#x6CD5;&#x6240;&#x629B;&#x51FA;&#x7684;&#x6BCF;&#x4E2A;&#x5F02;&#x5E38;&#x5EFA;&#x7ACB;&#x6587;&#x6863;</strong>&#xFF0C;&#x5BF9;&#x53D7;&#x68C0;&#x7684;&#x5F02;&#x5E38;&#x548C;&#x672A;&#x53D7;&#x68C0;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x5C31;&#x50CF;&#x5BF9;&#x4E8E;&#x62BD;&#x8C61;&#x548C;&#x5177;&#x4F53;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x4E00;&#x6837;&#x3002;<strong>&#x8981;&#x4E3A;&#x6BCF;&#x4E2A;&#x53D7;&#x68C0;&#x7684;&#x5F02;&#x5E38;&#x63D0;&#x4F9B;&#x5355;&#x72EC;&#x7684;throws&#x5B57;&#x53E5;&#xFF0C;&#x4E0D;&#x8981;&#x4E3A;&#x672A;&#x53D7;&#x68C0;&#x7684;&#x5F02;&#x5E38;&#x63D0;&#x4F9B;throws&#x8BED;&#x53E5;</strong>&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4E3A;&#x53EF;&#x4EE5;&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&#x5EFA;&#x7ACB;&#x6587;&#x6863;,&#x90A3;&#x4E48;&#x5176;&#x4ED6;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5F88;&#x96BE;&#x6216;&#x8005;&#x6839;&#x672C;&#x4E0D;&#x53EF;&#x80FD;&#x6709;&#x6548;&#x4F7F;&#x7528;&#x4F60;&#x7684;&#x7C7B;&#x6216;&#x63A5;&#x53E3;&#x3002;</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="61.抛出与抽象相对应的异常.html" class="navigation navigation-prev " aria-label="Previous page: 61.抛出与抽象相对应的异常">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="63.编写合适的异常信息.html" class="navigation navigation-next " aria-label="Next page: 63.编写合适的异常信息">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"62.每个方法抛出的异常都要有文档","level":"1.9.5","depth":2,"next":{"title":"63.编写合适的异常信息","level":"1.9.6","depth":2,"path":"第八章 异常/63.编写合适的异常信息.md","ref":"第八章 异常/63.编写合适的异常信息.md","articles":[]},"previous":{"title":"61.抛出与抽象相对应的异常","level":"1.9.4","depth":2,"path":"第八章 异常/61.抛出与抽象相对应的异常.md","ref":"第八章 异常/61.抛出与抽象相对应的异常.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"第八章 异常/62.每个方法抛出的异常都要有文档.md","mtime":"2018-07-25T11:53:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-25T13:25:40.550Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
